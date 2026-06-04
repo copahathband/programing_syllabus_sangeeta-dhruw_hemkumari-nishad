@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Programming Languages Syllabus</title>
+
+<style>
+body{background:linear-gradient(to left, yellow,red,green);
+
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    
+}
+
+h1{text-shadow:5px 5px 5px black;
+
+
+    
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: blue;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover{
+    background:red;
+}
+
+#content{
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background:pink ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    text-align: left;
+}
+
+a{
+    color: blue;
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Programming Languages Syllabus</h1>
+
+<button onclick="showHTML()">HTML</button>
+<button onclick="showCSS()">CSS</button>
+<button onclick="showJS()">JavaScript</button>
+<button onclick="showPython()">Python</button>
+<button onclick="showGame()">Game</button>
+
+<div id="content">
+    <h2>Click Any Button</h2>
+    <p>Syllabus will appear here.</p>
+</div>
+
+<script>
+
+function showHTML(){
+document.getElementById("content").innerHTML = `
+<h2>HTML Syllabus</h2>
+<ul>
+<li>Introduction to HTML</li>
+<li>HTML Tags</li>
+<li>Lists</li>
+<li>Tables</li>
+<li>Forms</li>
+<li>Images & Links</li>
+</ul>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+Learn More About HTML
+</a>
+</p>
+`;
+}
+
+function showCSS(){
+document.getElementById("content").innerHTML = `
+<h2>CSS Syllabus</h2>
+<ul>
+<li>Introduction to CSS</li>
+<li>Selectors</li>
+<li>Colors</li>
+<li>Box Model</li>
+<li>Flexbox</li>
+<li>Responsive Design</li>
+</ul>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+Learn More About CSS
+</a>
+</p>
+`;
+}
+
+function showJS(){
+document.getElementById("content").innerHTML = `
+<h2>JavaScript Syllabus</h2>
+<ul>
+<li>Variables</li>
+<li>Data Types</li>
+<li>Operators</li>
+<li>Functions</li>
+<li>Loops</li>
+<li>DOM Manipulation</li>
+</ul>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+Learn More About JavaScript
+</a>
+</p>
+`;
+}
+
+function showPython(){
+document.getElementById("content").innerHTML = `
+<h2>Python Syllabus</h2>
+<ul>
+<li>Introduction to Python</li>
+<li>Variables</li>
+<li>Input / Output</li>
+<li>Conditional Statements</li>
+<li>Loops</li>
+<li>Functions</li>
+<li>Lists & Dictionaries</li>
+</ul>
+
+<p>
+<a href="https://www.python.org" target="_blank">
+Learn More About Python
+</a>
+</p>
+`;
+}
+
+function showGame(){
+document.getElementById("content").innerHTML = `
+<h2>Tic Tac Toe Game</h2>
+
+<div style="display:grid;
+grid-template-columns:repeat(3,80px);
+gap:5px;
+justify-content:center;">
+
+<div class="cell" onclick="play(this)"></div>
+<div class="cell" onclick="play(this)"></div>
+<div class="cell" onclick="play(this)"></div>
+
+<div class="cell" onclick="play(this)"></div>
+<div class="cell" onclick="play(this)"></div>
+<div class="cell" onclick="play(this)"></div>
+
+<div class="cell" onclick="play(this)"></div>
+<div class="cell" onclick="play(this)"></div>
+<div class="cell" onclick="play(this)"></div>
+
+</div>
+
+<br>
+
+<button onclick="resetGame()">
+Restart Game
+</button>
+
+<p id="status">Player X Turn</p>
+`;
+}
+</script>
+
+</body>
+</html>
+			<b>(Sangeeta Dhruw/Hemkumari Nishad)</b>
