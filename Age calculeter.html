@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age Calculator</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:orange;
+    margin-top:100px;
+}
+
+.container{
+    background:green;
+    width:350px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+input, button{
+    padding:10px;
+    margin:10px;
+}
+
+button{
+    background:blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+#result{
+    font-size:20px;
+    font-weight:bold;
+    margin-top:15px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Age Calculator</h2>
+
+    <input type="date" id="dob">
+    <br>
+
+    <button onclick="calculateAge()">Calculate Age</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function calculateAge(){
+
+    let dob = new Date(document.getElementById("dob").value);
+    let today = new Date();
+
+    let age = today.getFullYear() - dob.getFullYear();
+
+    let month = today.getMonth() - dob.getMonth();
+let day = today.getMonth() - dob.getMonth();
+
+
+    if(month < 0 || (month === 0 && today.getDate() < dob.getDate())){
+        age--;
+    }
+
+    document.getElementById("result").innerHTML =
+    "Your Age is: " + age + " Years"+month+"month"+day+"day";
+}
+</script>
+
+</body>
+</html>
+(Hemkumari Nishad /Sangeeta Dhruw)

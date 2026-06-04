@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Calculator</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:lightblue;
+            text-align:center;
+        }
+
+        .container{
+            width:400px;
+            margin:50px auto;
+            background:pink;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        input{
+            width:80%;
+            padding:10px;
+            margin:5px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:blue;
+            color:white;
+            border:none;
+            cursor:pointer;
+            margin-top:10px;
+        }
+
+        #result{
+            margin-top:20px;
+            font-size:18px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Result Calculator</h2>
+
+    <input type="number" id="sub1" placeholder="Hindi Marks"><br>
+    <input type="number" id="sub2" placeholder="English Marks"><br>
+    <input type="number" id="sub3" placeholder="Math Marks"><br>
+    <input type="number" id="sub4" placeholder="Science Marks"><br>
+    <input type="number" id="sub5" placeholder="Computer Marks"><br>
+
+    <button onclick="calculateResult()">Calculate Result</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function calculateResult(){
+
+    let s1 = Number(document.getElementById("sub1").value);
+    let s2 = Number(document.getElementById("sub2").value);
+    let s3 = Number(document.getElementById("sub3").value);
+    let s4 = Number(document.getElementById("sub4").value);
+    let s5 = Number(document.getElementById("sub5").value);
+
+    let total = s1 + s2 + s3 + s4 + s5;
+    let percentage = total / 5;
+
+    let grade;
+
+    if(percentage >= 90){
+        grade = "A+";
+    }
+    else if(percentage >= 80){
+        grade = "A";
+    }
+    else if(percentage >= 70){
+        grade = "B";
+    }
+    else if(percentage >= 60){
+        grade = "C";
+    }
+    else if(percentage >= 40){
+        grade = "D";
+    }
+    else{
+        grade = "Fail";
+    }
+
+    document.getElementById("result").innerHTML =
+    "Total Marks: " + total +
+    "<br>Percentage: " + percentage.toFixed(2) + "%" +
+    "<br>Grade: " + grade;
+}
+</script>
+
+</body>
+</html>
+(Sangeeta Dhruw/Hemkumari Nishad)
